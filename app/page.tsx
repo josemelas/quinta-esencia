@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"; // Importante para la navegación
 
 export default function Home() {
   return (
@@ -11,31 +12,40 @@ export default function Home() {
             <h1 className="text-7xl font-bold titulo-quintaesencia">
               Centro Artístico
             </h1>
-            {/* Subtítulo ajustado a una sola línea y más pequeño  */}
             <p className="text-4xl md:text-5xl font-bold text-[#2d2d44] whitespace-nowrap">
               Experiencias creativas
             </p>
           </div>
 
-          {/* Texto justificado y corrido fiel al PDF [cite: 71, 72, 73] */}
+          {/* Texto justificado con colores de marca */}
           <div className="text-[17px] leading-relaxed text-gray-600 font-light max-w-xl text-justify">
             Un espacio <span className="text-[#f29278] font-medium">creado para el arte, la creatividad y la conexión auténtica.</span> Celebramos la expresión artística en todas sus formas. Ofrecemos <span className="text-[#db5c8d] font-medium">talleres presenciales, clases personalizadas,</span> experiencias creativas para eventos privados y una <span className="text-[#a366ab] font-medium">galería virtual</span> que da visibilidad a artistas emergentes. Nuestro objetivo es <span className="text-[#7a7adb] font-medium">impulsar el talento,</span> fomentar la colaboración y brindar un espacio donde cada persona pueda <span className="text-[#5ca9e6] font-medium">conectar con su esencia a través del arte.</span>
           </div>
 
-          {/* Botones compactos y profesionales [cite: 74, 75] */}
+          {/* Botones con navegación conectada */}
           <div className="flex gap-4 pt-2">
             <button className="flex items-center gap-3 bg-[#2d2d44] text-white px-7 py-3 rounded-full text-[15px] font-bold hover:bg-[#1a1a2e] transition-all shadow-md cursor-pointer hover:shadow-lg active:scale-95">
-             <Image src="/usuario.png" alt="" width={18} height={18} />
+              <Image src="/usuario.png" alt="" width={18} height={18} />
               Unirse a la comunidad
+            </button>
+
+            {/* Link al Calendario que acabamos de crear */}
+            <Link href="/calendario">
+              <button className="flex items-center gap-3 border-[2px] border-[#2d2d44] text-[#2d2d44] px-7 py-3 rounded-full text-[15px] font-bold bg-[#f8f9fa] hover:bg-[#e9ecef] transition-all cursor-pointer active:scale-95 group">
+                <Image 
+                  src="/calendario.png" 
+                  alt="" 
+                  width={18} 
+                  height={18} 
+                  className="group-hover:invert transition-all" 
+                />
+                Calendario de actividades
               </button>
-            <button className="flex items-center gap-3 border-[2px] border-[#2d2d44] text-[#2d2d44] px-7 py-3 rounded-full text-[15px] font-bold bg-[#f8f9fa] hover:bg-[#e9ecef] transition-all cursor-pointer active:scale-95">
-            <Image src="/calendario.png" alt="" width={18} height={18} className="group-hover:invert transition-all" />
-             Calendario de actividades
-             </button>
+            </Link>
           </div>
         </div>
 
-        {/* Lado derecho: Imagen principal [cite: 15] */}
+        {/* Lado derecho: Imagen principal con efecto de color */}
         <div className="relative h-[550px] w-full rounded-3xl overflow-hidden shadow-lg border-white border-4">
           <Image
             src="/Playa.png"
