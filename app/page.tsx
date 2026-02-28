@@ -23,11 +23,6 @@ export default function Home() {
 
           <div className="flex gap-4 pt-2">
 
-            <button className="flex items-center gap-3 bg-[#2d2d44] text-white px-7 py-3 rounded-full text-[15px] font-bold hover:bg-[#1a1a2e] transition-all shadow-md active:scale-95">
-              <Image src="/usuario.png" alt="" width={18} height={18} />
-              Unirse a la comunidad
-            </button>
-
             <Link href="/register">
               <button className="flex items-center gap-3 bg-[#2d2d44] text-white px-7 py-3 rounded-full text-[15px] font-bold hover:bg-[#1a1a2e] transition-all shadow-md cursor-pointer hover:shadow-lg active:scale-95">
                 <Image src="/usuario.png" alt="" width={18} height={18} />
